@@ -251,9 +251,7 @@ declare module "webpack-sources" {
 
 		map(options?: MapOptions): Object;
 
-		sourceAndMap(
-			options?: MapOptions
-		): {
+		sourceAndMap(options?: MapOptions): {
 			source: string | Buffer;
 			map: Object;
 		};
@@ -371,6 +369,13 @@ declare module "browserslist" {
 		export function findConfig(path: string): Record<string, string[]>;
 	}
 	export = browserslist;
+}
+
+// TODO remove that when @types/estree is updated
+interface ImportAttributeNode {
+	type: "ImportAttribute";
+	key: import("estree").Identifier | import("estree").Literal;
+	value: import("estree").Literal;
 }
 
 type TODO = any;

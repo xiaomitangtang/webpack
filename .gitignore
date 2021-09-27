@@ -7,7 +7,11 @@
 /benchmark/js
 /benchmark/fixtures
 /examples/**/dist
+/assembly/**/*.wat
+/assembly/**/*.wasm
 /coverage
+/.nyc_output
+/.jest-cache
 .DS_Store
 *.log
 .idea
